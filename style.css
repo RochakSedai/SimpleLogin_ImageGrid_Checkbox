@@ -11,8 +11,6 @@ body {
     border: 3px solid #f1f1f1;
     background-color: white;
     
-    
-
 }
 .container {
   margin: 30px 100px;
@@ -33,14 +31,14 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 button {
-    background-color: blue;
+    background-color: teal;
     color: white;
     padding: 14px 20px;
-    margin: 8px 6px;
+    margin: 8px 8px;
     border: none;
     cursor: pointer;
     display: flex;
-    width: 15%;
+    width: auto;
     border-radius: 6px;
 }
 
@@ -100,7 +98,7 @@ form {
   
   /* When the checkbox is checked, add a blue background */
   .container-check input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: black;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -130,11 +128,12 @@ form {
 
 
 .image-container{
-  border: 3px solid #f1f1f1;
   width: 60%;
   margin-left: 350px;
   margin-top: 50px;
-  background-color: whitesmoke;
+  background-color: beige;
+  
+  
 }
 
 .gallery {
@@ -142,13 +141,15 @@ form {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 5vw);
   grid-gap: 1.5rem; 
+  margin: 30px 10px;
+
 }
 
 .gallery__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; 
+  display: flex; 
 }
 /* 
 .galley__item {
@@ -226,4 +227,73 @@ form {
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media only screen and (max-width:850px) {
+
+    .form-container{
+      max-width: 1200px;
+      margin: 10 auto;
+      display: grid;
+      gap: 1rem;
+      background:whitesmoke ;
+      }
+  
+    .container{ 
+      grid-template-columns: 1fr;
+      grid-template-rows: 10fr 10fr ;
+      grid-template-areas:
+      "form-container"
+      "checkbox-container"
+      "image-container"
+    }
+    button{
+      width:auto;
+      }
+    .checkbox-container{
+      width:auto; 
+      background:whitesmoke ;
+      margin: 0;
+    }
+
+    .image-container{
+      margin-left: 0;
+      width: fit-content;
+      background-color: black;
+    }
+
+    .gallery{
+      display:inherit;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 5vw);
+    }
+    .gallery__img {
+      width: 100%;
+      height: auto;
+
+    }
+    .gallery__item--1{
+      width: 100%;
+      height: auto;
+    }
+    .gallery__item--2{
+      width: 100%;
+      height: auto;
+    }
+    .gallery__item--3{
+      width: 70%;
+      height: auto;
+    }
+    .gallery__item--4{
+      width: 70%;
+      height: auto;
+    }
+    .gallery__item--5{
+      width: 70%;
+      height: auto;
+    }
+    .gallery__item--6{
+      width: 70%;
+      height: auto;
+    }
+
 }
